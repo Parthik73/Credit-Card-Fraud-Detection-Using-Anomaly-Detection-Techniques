@@ -1,5 +1,4 @@
-# Dataset (about 150 MB, download from Kaggle instead of committing)
-data/creditcard.csv
+# Dataset is stored with Git LFS
 
 # Python
 __pycache__/
