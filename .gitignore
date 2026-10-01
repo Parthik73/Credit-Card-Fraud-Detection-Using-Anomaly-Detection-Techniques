@@ -1,0 +1,15 @@
+# Dataset (about 150 MB, download from Kaggle instead of committing)
+data/creditcard.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
