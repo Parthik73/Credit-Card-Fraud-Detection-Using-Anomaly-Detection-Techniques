@@ -14,9 +14,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-# 💳 Credit Card Fraud Detection Using Machine Learning
+# 💳 FraudLens: Credit Card Fraud Detection Using Anomaly Detection
 
-A Machine Learning project that detects **fraudulent credit card transactions** using classification and anomaly detection techniques. The project includes data preprocessing, exploratory data analysis, handling of imbalanced data, model training, evaluation, and a **Streamlit-based web interface** for real-time fraud prediction.
+**FraudLens** is a Machine Learning project that detects **fraudulent credit card transactions** using classification and anomaly detection techniques. The project includes data preprocessing, exploratory data analysis, handling of imbalanced data, model training, evaluation, and a **Streamlit-based web interface** for real-time fraud prediction.
 
 ---
 
@@ -24,7 +24,7 @@ A Machine Learning project that detects **fraudulent credit card transactions** 
 
 Credit card fraud is a major challenge in the financial sector, where fraudulent transactions can cause significant financial losses.
 
-This project aims to build an automated **Credit Card Fraud Detection System** that analyzes transaction features and predicts whether a transaction is:
+**FraudLens** aims to build an automated **credit card fraud detection system** that analyzes transaction features and predicts whether a transaction is:
 
 - ✅ **Legitimate Transaction**
 - 🚨 **Fraudulent Transaction**
@@ -91,7 +91,7 @@ Handle Class Imbalance
 
 ### 1. Data Collection
 
-The project uses a credit card transaction dataset containing transaction-related features and a target variable indicating whether a transaction is fraudulent.
+The project uses the public [ULB credit card dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) (`data/creditcard.csv`). It contains transaction features and a target variable indicating whether a transaction is fraudulent.
 
 The target variable represents:
 
@@ -274,9 +274,9 @@ The trained model is evaluated using:
 
 ## 🌐 Streamlit Web Application
 
-The trained Machine Learning model is integrated into a **Streamlit frontend**.
+**FraudLens** loads the trained model in a **Streamlit frontend**.
 
-The Streamlit application provides an interactive interface through which transaction data can be submitted for fraud detection.
+The application provides an interactive interface through which transaction data can be submitted for fraud detection.
 
 ```text
                   Streamlit
@@ -306,7 +306,8 @@ notebooks/
             │
             │ Train
             ▼
-     fraud_model.pkl
+  fraud_model.pkl
+    scaler.pkl
             │
             │ Load
             ▼
@@ -365,19 +366,19 @@ Credit-Card-Fraud-Detection/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/Parthik73/Credit-Card-Fraud-Detection-Using-Anomaly-Detection-Techniques.git
 ```
 
 ### 2. Move into the project directory
 
 ```bash
-cd Credit-Card-Fraud-Detection
+cd Credit-Card-Fraud-Detection-Using-Anomaly-Detection-Techniques
 ```
 
 ### 3. Create a virtual environment
 
 ```bash
-python -m venv venv
+python -m venv .venv
 ```
 
 ### 4. Activate the virtual environment
@@ -385,13 +386,13 @@ python -m venv venv
 **Windows:**
 
 ```bash
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 **macOS / Linux:**
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 ### 5. Install dependencies
@@ -423,7 +424,7 @@ Then:
 7. Handle class imbalance using SMOTE.
 8. Train the Machine Learning model.
 9. Evaluate the model.
-10. Save the trained model using Joblib.
+10. Save the trained model and scaler with Joblib (`models/fraud_model.pkl` and `models/scaler.pkl`).
 
 The trained files are stored inside:
 
@@ -589,6 +590,8 @@ Interested in:
 ---
 
 ## ⭐ Project
+
+**FraudLens** — credit card fraud detection using anomaly detection.
 
 If you find this project useful, feel free to explore the repository and learn from the implementation.
 

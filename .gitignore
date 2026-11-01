@@ -1,13 +1,16 @@
-# Dataset is stored with Git LFS
-
 # Python
 __pycache__/
 *.pyc
+*.egg-info/
 .venv/
 venv/
+.pytest_cache/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Office lock files
+~$*
 
 # OS / editor
 .DS_Store
